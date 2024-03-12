@@ -11,7 +11,7 @@ def hello():
     return "Hello HBNB!"
 
 
-@app.route("/hbnb", strict_slashes=False)
+gapp.route("/hbnb", strict_slashes=False)
 def hbnb():
     return "HBNB"
 
