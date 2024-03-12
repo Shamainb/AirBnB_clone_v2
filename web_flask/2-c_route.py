@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from flask import flask
+import flask
 
 """
 a script that starts a Flask web application
@@ -8,15 +8,15 @@ app = flask (__name__)
 
 @app.route("/", strict_slashes=False)
 def hello():
-    return <p> Hello HBNB! </p>
+    return "Hello HBNB!"
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    return <p> HBNB </p>
+    return "HBNB"
 
 @app.route("/c/<text>", strict_slashes=False)
 def text():
-    return <p> C </p> <p> text </p>
+    return "C text"
 
 if __name == ' __main__':
     app.run(host='0.0.0.0', port=5000)
