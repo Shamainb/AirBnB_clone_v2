@@ -4,7 +4,7 @@ import flask
 """
 a script that starts a Flask web application
 """
-app = flask (__name__)
+app = flask.Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello():
@@ -15,8 +15,8 @@ def hbnb():
     return "HBNB"
 
 @app.route("/c/<text>", strict_slashes=False)
-def text():
-    return "C text"
+def c_text(text):
+    return "C {}".format(text.replace('_', ' '))
 
-if __name == ' __main__':
+if __name__ == ' __main__':
     app.run(host='0.0.0.0', port=5000)
