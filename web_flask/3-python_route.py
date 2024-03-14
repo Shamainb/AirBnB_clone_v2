@@ -22,6 +22,11 @@ def display_hbnb():
 def display_c_text(text):
     return 'C ' + text.replace('_', ' ')
 
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def python_text(text='is cool'):
+    text = text.replace('_', ' ')
+    return f'Python {text}'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
